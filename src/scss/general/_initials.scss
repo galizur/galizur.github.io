@@ -47,6 +47,10 @@ body {
   background-color: var(--clr-bg);
   color: var(--clr-txt);
   min-height: 100vh;
+  ::selection {
+    background-color: var(--clr-txt);
+    color: var(--clr-txt-selection);
+  }
 }
 
 main {
@@ -89,7 +93,6 @@ img {
 }
 
 a {
-
   &:hover {
     color: var(--clr-subtle);
   }

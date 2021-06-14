@@ -31,7 +31,7 @@ body {
 }
 
 main {
-  margin: 0 3em 3em 3em;
+  margin: 0 3em 0 3em;
   background-color: transparent;
   
   @media screen and (min-width: 37.5em) {
@@ -47,6 +47,17 @@ main {
   }
 }
 
+footer {
+  background-color: transparent;
+  font-size: 1.5rem;
+  padding: 1em;
+
+  a {
+    text-decoration: none;
+    text-shadow: 0.125rem 0.125rem 0.25rem $nord01;
+  }
+}
+
 .flex {
   display: flex;
   flex-direction: column;
@@ -58,30 +69,32 @@ main {
   margin-top: auto;
 }
 
+//! Temporary until links can point somewhere.
 .button-like--index {
   @extend .button-like;
   border-radius: 1.5625em;
-  background-color: color.scale($nord08, $lightness: -60%);
-  color: $nord06;
+  // background-color: color.scale($nord08, $lightness: -60%);
+  // color: $nord06;
+  background-color: gray;
+  cursor: not-allowed;
   
   text-decoration: none;
   font-weight: 600;
   font-size: 1.125rem;
-  // box-shadow: 0.25rem 0.25rem 0.5rem $nord01;
   @include transition-ease-in(0.1s);
 
-  &:hover {
-    background-color: $nord08;
-    color: $nord00;
-    box-shadow: 0.25rem 0.25rem 0.5rem $nord01;
-    text-shadow: 0.125rem 0.125rem 0.25rem $nord01;
-  }
+  // &:hover {
+  //   background-color: $nord08;
+  //   color: $nord00;
+  //   box-shadow: 0.25rem 0.25rem 0.5rem $nord01;
+  //   text-shadow: 0.125rem 0.125rem 0.25rem $nord01;
+  // }
 
-  &:active {
-    @extend :hover;
-    box-shadow: 0.25rem 0.25rem 0.5rem $nord01 inset;
-    text-shadow: 0.25rem 0.25rem 0.125rem $nord01;
-  }
+  // &:active {
+  //   @extend :hover;
+  //   box-shadow: 0.25rem 0.25rem 0.5rem $nord01 inset;
+  //   text-shadow: 0.25rem 0.25rem 0.125rem $nord01;
+  // }
 }
 
 h1 {
@@ -102,5 +115,13 @@ a {
 
   &:hover {
     text-decoration-style: wavy;
+  }
+
+  &:visited {
+    color: $nord05;
+  }
+
+  &:active {
+    color: $nord05;
   }
 }

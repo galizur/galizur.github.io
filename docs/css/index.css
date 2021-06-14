@@ -64,6 +64,10 @@ body {
   color: var(--clr-txt);
   min-height: 100vh;
 }
+body ::selection {
+  background-color: var(--clr-txt);
+  color: var(--clr-txt-selection);
+}
 
 main {
   background-color: var(--clr-elevated-1);
@@ -104,7 +108,7 @@ img {
   max-width: 100%;
 }
 
-a:hover, a.button-like--index:active {
+a:hover {
   color: var(--clr-subtle);
 }
 a:visited {
@@ -173,7 +177,7 @@ body {
 }
 
 main {
-  margin: 0 3em 3em 3em;
+  margin: 0 3em 0 3em;
   background-color: transparent;
 }
 @media screen and (min-width: 37.5em) {
@@ -192,6 +196,16 @@ main {
   }
 }
 
+footer {
+  background-color: transparent;
+  font-size: 1.5rem;
+  padding: 1em;
+}
+footer a {
+  text-decoration: none;
+  text-shadow: 0.125rem 0.125rem 0.25rem #3b4252;
+}
+
 .flex {
   display: flex;
   flex-direction: column;
@@ -205,22 +219,12 @@ main {
 
 .button-like--index {
   border-radius: 1.5625em;
-  background-color: #275563;
-  color: #eceff4;
+  background-color: gray;
+  cursor: not-allowed;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.125rem;
   transition: all 0.1s ease-in;
-}
-.button-like--index:hover, .button-like--index:active {
-  background-color: #88c0d0;
-  color: #2e3440;
-  box-shadow: 0.25rem 0.25rem 0.5rem #3b4252;
-  text-shadow: 0.125rem 0.125rem 0.25rem #3b4252;
-}
-.button-like--index:active {
-  box-shadow: 0.25rem 0.25rem 0.5rem #3b4252 inset;
-  text-shadow: 0.25rem 0.25rem 0.125rem #3b4252;
 }
 
 h1 {
@@ -239,6 +243,12 @@ h2 {
 a {
   color: #e5e9f0;
 }
-a:hover, a.button-like--index:active {
+a:hover {
   text-decoration-style: wavy;
+}
+a:visited {
+  color: #e5e9f0;
+}
+a:active {
+  color: #e5e9f0;
 }
