@@ -1,0 +1,11 @@
+@mixin transition-ease-in-out ($time: 0.5s) {
+    transition: all $time ease-in-out;
+}
+
+@mixin transition-ease-in ($time: 0.5s) {
+    transition: all $time ease-in;
+}
+
+@mixin transition-ease-out ($time: 0.5s) {
+    transition: all $time ease-out;
+}

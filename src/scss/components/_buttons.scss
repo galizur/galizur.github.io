@@ -1,0 +1,29 @@
+.button-like {
+  display: block;
+  padding: 1em;
+  margin: 1em;
+}
+
+.theme-btn {
+  width: 6em;
+  height: 6em;
+  padding: 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: white; // TODO: Find proper color
+}
+
+.theme-btn.dark {
+  display: none;
+}
+
+.light .theme-btn.light {
+  display: none;
+}
+
+.light .theme-btn.dark {
+  display: block;
+  color: black; // TODO: Find proper color
+}

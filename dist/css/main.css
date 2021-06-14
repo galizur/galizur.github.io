@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+/** Colors **/
+.text--underline {
+  text-decoration: underline;
+}
+.text--center {
+  text-align: center;
+}
+.text--small {
+  font-size: 0.75em;
+}
+.text--small-heading {
+  font-size: 0.75em;
+  font-weight: 500;
+}
+.text--slanted {
+  font-style: italic;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root,
+:root.dark {
+  --clr-bg: #2e3440;
+  --clr-elevated: #3b4252;
+  --clr-elevated-1: #4c566a;
+  --clr-subtle: #eceff4;
+  --clr-txt: #e5e9f0;
+  --clr-txt-selection: #434c5e;
+  --clr-primary: #88c0d0;
+  --clr-important: #8fbcbb;
+  --clr-secondary: #81a1c1;
+  --clr-tertiary: #5e81ac;
+  --clr-error: #bf616a;
+  --clr-dangerous: #d08770;
+  --clr-warning: #ebcb8b;
+  --clr-success: #a3be8c;
+  --clr-uncommon: #b48ead;
+  --fnt-sans: "Roboto", sans-serif;
+  --fnt-serif: "EB Garamond", serif;
+  --fnt-mono: "Roboto Mono", monospace;
+}
+
+:root.light {
+  --clr-bg: #eceff4;
+  --clr-elevated: #d8dee9;
+  --clr-elevated-1: #3b4252;
+  --clr-subtle: #4c566a;
+  --clr-txt: #2e3440;
+  --clr-txt-selection: #e5e9f0;
+}
+
+body {
+  font-family: var(--fnt-sans);
+  background-color: var(--clr-bg);
+  color: var(--clr-txt);
+  min-height: 100vh;
+}
+
+main {
+  background-color: var(--clr-elevated-1);
+}
+
+header,
+footer {
+  background-color: var(--clr-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fnt-serif), serif;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+a:hover {
+  color: var(--clr-subtle);
+}
+a:visited {
+  color: var(--clr-tertiary);
+}
+
+.button-like {
+  display: block;
+  padding: 1em;
+  margin: 1em;
+}
+
+.theme-btn {
+  width: 6em;
+  height: 6em;
+  padding: 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+.theme-btn.dark {
+  display: none;
+}
+
+.light .theme-btn.light {
+  display: none;
+}
+
+.light .theme-btn.dark {
+  display: block;
+  color: black;
+}

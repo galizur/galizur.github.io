@@ -1,0 +1,106 @@
+@use 'abstract' as *;
+@use './general/initials';
+@use './mixins/transitions' as *;
+@use './components/buttons' as *;
+@use 'sass:color';
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  @media screen and (max-width: 37.5em) {
+    background-image: url("https://picsum.photos/id/1022/600/340/?blur");
+  }
+
+  @media screen and (min-width: 37.5em) {
+    background-image: url("https://picsum.photos/id/1022/768/440/?blur");
+  }
+
+  @media screen and (min-width: 48em) {
+    background-image: url("https://picsum.photos/id/1022/992/560/?blur");
+  }
+
+  @media screen and (min-width: 62em) {
+    background-image: url("https://picsum.photos/id/1022/1920/1080/?blur");
+  }
+
+  @media screen and (min-width: 120em) {
+    background-image: url("https://picsum.photos/id/1022/4000/2000/?blur");
+  }
+}
+
+main {
+  margin: 0 3em 3em 3em;
+  background-color: transparent;
+  
+  @media screen and (min-width: 37.5em) {
+    width: 60ch;
+  }
+
+  @media screen and (min-width: 48em) {
+    width : 70ch;
+  }
+
+  @media screen and (min-width: 62em) {
+    width: 80ch;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom {
+  margin-top: auto;
+}
+
+.button-like--index {
+  @extend .button-like;
+  border-radius: 1.5625em;
+  background-color: color.scale($nord08, $lightness: -60%);
+  color: $nord06;
+  
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.125rem;
+  // box-shadow: 0.25rem 0.25rem 0.5rem $nord01;
+  @include transition-ease-in(0.1s);
+
+  &:hover {
+    background-color: $nord08;
+    color: $nord00;
+    box-shadow: 0.25rem 0.25rem 0.5rem $nord01;
+    text-shadow: 0.125rem 0.125rem 0.25rem $nord01;
+  }
+
+  &:active {
+    @extend :hover;
+    box-shadow: 0.25rem 0.25rem 0.5rem $nord01 inset;
+    text-shadow: 0.25rem 0.25rem 0.125rem $nord01;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h1,
+h2 {
+  text-shadow: 0 0 0.5rem $nord01;
+}
+
+a {
+  color: $nord05;
+
+  &:hover {
+    text-decoration-style: wavy;
+  }
+}
