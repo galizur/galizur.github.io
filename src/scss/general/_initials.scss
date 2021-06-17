@@ -28,6 +28,7 @@
   --clr-warning: #{$nord13};
   --clr-success: #{$nord14};
   --clr-uncommon: #{$nord15};
+  --fnt-size: 1rem;
   --fnt-sans: #{meta.inspect($font-family-sans)};
   --fnt-serif: #{meta.inspect($font-family-serif)};
   --fnt-mono: #{meta.inspect($font-family-monospace)};
@@ -54,7 +55,7 @@ body {
 }
 
 main {
-  background-color: var(--clr-elevated-1);
+  background-color: var(--clr-elevated);
 }
 
 header,
@@ -93,11 +94,25 @@ img {
 }
 
 a {
+  color: var(--clr-txt);
+
   &:hover {
     color: var(--clr-subtle);
+    font-weight: 700;
   }
 
   &:visited {
     color: var(--clr-tertiary);
+  }
+
+  &:active {
+    color: var(--clr-subtle);
+    border: 0.125em dashed var(--clr-subtle);
+  }
+}
+
+.social--icons {
+  a {
+    text-decoration: none;
   }
 }

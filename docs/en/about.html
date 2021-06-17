@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="../css/main.css" />
   </head>
   <body>
-    <head>
+    <header>
+      <img class="avatar" src="../resources/images/author.jpeg" alt="" />
       <div class="toggle-container">
         <button
           class="theme-btn dark"
@@ -32,15 +33,20 @@
           <span class="fas fa-sun fa-lg"></span>
         </button>
       </div>
-      <img src="https://picsum.photos/2000/1000" alt="" />
-      <img src="../resources/images/author.jpeg" alt="" />
-    </head>
-    <main></main>
+      <nav> <!--class="text--center"-->
+        <ul>
+          <li>About</li>
+          <li>Portfolio</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>About me.</h1>
+      This is the main part
+    </main>
     <footer>
-      <!-- TODO: disable temporarily until a decision has been made -->
-      <!-- <a href="#"><span class="fab fa-facebook-f"></span></a> -->
-      <!-- <a href="#"><span class="fab fa-twitter"></span></a> -->
-      <div class="social--icons">
+      <div class="social--icons text--center">
         <a href="https://github.com/galizur/">
           <span
             class="fab fa-github"
@@ -49,8 +55,25 @@
           ></span>
           <span id="github">Github</span>
         </a>
+        <a href="#">
+          <span
+            class="fab fa-twitter"
+            role="img"
+            aria-labelledby="twitter"
+          ></span>
+          <span id="twitter">Twitter</span>
+        </a>
+        <a href="#">
+          <span
+            class="fab fa-instagram"
+            role="img"
+            aria-labelledby="instagram"
+          ></span>
+          <span id="instagram">Instagram</span>
+        </a>
       </div>
     </footer>
+    <!--! Scripts -->
     <script src="../resources/js/themeSwitch.js"></script>
     <script
       src="https://kit.fontawesome.com/84aca27788.js"

@@ -1,3 +1,5 @@
+@use '../abstract/colors' as *;
+
 .button-like {
   display: block;
   padding: 1em;
@@ -12,7 +14,7 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
-  color: white; // TODO: Find proper color
+  color: $nord06;
 }
 
 .theme-btn.dark {
@@ -25,5 +27,5 @@
 
 .light .theme-btn.dark {
   display: block;
-  color: black; // TODO: Find proper color
+  color: $nord00;
 }
