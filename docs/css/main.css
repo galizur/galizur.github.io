@@ -27,80 +27,8 @@
   padding: 0;
 }
 
-:root,
-:root.dark {
-  --clr-bg: #2e3440;
-  --clr-elevated: #3b4252;
-  --clr-elevated-1: #4c566a;
-  --clr-subtle: #eceff4;
-  --clr-txt: #e5e9f0;
-  --clr-txt-selection: #434c5e;
-  --clr-primary: #88c0d0;
-  --clr-important: #8fbcbb;
-  --clr-secondary: #81a1c1;
-  --clr-tertiary: #5e81ac;
-  --clr-error: #bf616a;
-  --clr-dangerous: #d08770;
-  --clr-warning: #ebcb8b;
-  --clr-success: #a3be8c;
-  --clr-uncommon: #b48ead;
-  --fnt-size: 1rem;
-  --fnt-sans: "Roboto", sans-serif;
-  --fnt-serif: "EB Garamond", serif;
-  --fnt-mono: "Roboto Mono", monospace;
-}
-
-:root.light {
-  --clr-bg: #eceff4;
-  --clr-elevated: #d8dee9;
-  --clr-elevated-1: #3b4252;
-  --clr-subtle: #4c566a;
-  --clr-txt: #2e3440;
-  --clr-txt-selection: #e5e9f0;
-}
-
 body {
-  font-family: var(--fnt-sans);
-  background-color: var(--clr-bg);
-  color: var(--clr-txt);
   min-height: 100vh;
-}
-body ::selection {
-  background-color: var(--clr-txt);
-  color: var(--clr-txt-selection);
-}
-
-main {
-  background-color: var(--clr-elevated);
-}
-
-header,
-footer {
-  background-color: var(--clr-bg);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--fnt-serif), serif;
-}
-
-h1 {
-  font-weight: 800;
-}
-
-h2,
-h3 {
-  font-weight: 600;
-}
-
-h4,
-h5,
-h6 {
-  font-weight: 400;
 }
 
 img {
@@ -109,23 +37,8 @@ img {
   max-width: 100%;
 }
 
-a {
-  color: var(--clr-txt);
-}
-a:hover {
-  color: var(--clr-subtle);
-  font-weight: 700;
-}
-a:visited {
-  color: var(--clr-tertiary);
-}
 a:active {
-  color: var(--clr-subtle);
   border: 0.125em dashed var(--clr-subtle);
-}
-
-.social--icons a {
-  text-decoration: none;
 }
 
 .button-like {
@@ -158,6 +71,110 @@ a:active {
   color: #2e3440;
 }
 
+:root,
+[data-theme=default] {
+  --clr-bg: #2e3440;
+  --clr-elevated: #3b4252;
+  --clr-elevated-1: #4c566a;
+  --clr-subtle: #eceff4;
+  --clr-txt: #e5e9f0;
+  --clr-txt-selection: #434c5e;
+  --clr-primary: #88c0d0;
+  --clr-important: #8fbcbb;
+  --clr-secondary: #81a1c1;
+  --clr-tertiary: #5e81ac;
+  --clr-error: #bf616a;
+  --clr-dangerous: #d08770;
+  --clr-warning: #ebcb8b;
+  --clr-success: #a3be8c;
+  --clr-uncommon: #b48ead;
+}
+
+[data-theme=light] {
+  --clr-bg: #eceff4;
+  --clr-elevated: #d8dee9;
+  --clr-elevated-1: #3b4252;
+  --clr-subtle: #4c566a;
+  --clr-txt: #2e3440;
+  --clr-txt-selection: #e5e9f0;
+}
+
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-txt);
+}
+body ::selection {
+  background-color: var(--clr-txt);
+  color: var(--clr-txt-selection);
+}
+
+main {
+  background-color: var(--clr-elevated);
+}
+
+header,
+footer {
+  background-color: var(--clr-bg);
+}
+
+a {
+  color: var(--clr-txt);
+}
+a:hover {
+  color: var(--clr-subtle);
+}
+a:visited {
+  color: var(--clr-tertiary);
+}
+a:active {
+  color: var(--clr-subtle);
+}
+
+:root,
+[data-theme=default] {
+  --fnt-size: 1rem;
+  --ratio: 1.333;
+  --fnt-sans: "Roboto", sans-serif;
+  --fnt-serif: "EB Garamond", serif;
+  --fnt-mono: "Roboto Mono", monospace;
+}
+
+body {
+  font-family: var(--fnt-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fnt-serif), serif;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+a:hover {
+  font-weight: 700;
+}
+
+.social--icons a {
+  text-decoration: none;
+}
+
 body {
   display: grid;
   grid-template-rows: 2fr 1fr auto;
@@ -169,11 +186,9 @@ header {
   grid-area: top;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 4fr 1fr;
+  grid-template-rows: 1fr auto;
   justify-items: center;
   align-items: center;
-  gap: 4px;
-  grid-auto-flow: column;
 }
 
 .avatar {
@@ -182,7 +197,7 @@ header {
   border-radius: 50%;
 }
 
-.toggle-container {
+.switch {
   grid-row: 1/2;
   grid-column: 3/4;
   justify-self: end;
@@ -194,17 +209,19 @@ nav {
   justify-content: center;
   align-content: center;
   color: #eceff4;
-  height: 100%;
-  background-image: linear-gradient(to bottom, rgba(46, 52, 64, 0), #2e3440);
-  width: 100%;
 }
 nav ul {
   list-style-type: none;
-  justify-self: center;
-  align-self: center;
+  padding-top: 1em;
+  margin: 0.5em;
 }
 nav li {
   display: inline-block;
+  padding: 1em;
+  background-color: #4c566a;
+}
+nav li.active {
+  background-color: var(--clr-tertiary);
 }
 
 main {
@@ -212,18 +229,13 @@ main {
   justify-self: center;
   width: 80ch;
   padding: 1em;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin: 1em;
+  box-shadow: 0.125em 0.125em 0.125em 0.125em var(--clr-elevated-1);
 }
 
 footer {
   grid-area: bottom;
   padding: 1em;
-}
-
-.theme-btn {
-  background-color: var(--clr-bg);
-  border: 0.375em solid var(--clr-secondary);
 }
 
 .avatar {

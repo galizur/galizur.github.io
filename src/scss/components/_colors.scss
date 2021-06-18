@@ -1,16 +1,7 @@
-@use '../abstract' as *;
-@use 'sass:meta';
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@use '../abstract/colors' as *;
 
 :root,
-:root.dark {
+[data-theme="default"] {
   // Variables
   --clr-bg: #{$nord00};
   --clr-elevated: #{$nord01};
@@ -28,13 +19,9 @@
   --clr-warning: #{$nord13};
   --clr-success: #{$nord14};
   --clr-uncommon: #{$nord15};
-  --fnt-size: 1rem;
-  --fnt-sans: #{meta.inspect($font-family-sans)};
-  --fnt-serif: #{meta.inspect($font-family-serif)};
-  --fnt-mono: #{meta.inspect($font-family-monospace)};
 }
 
-:root.light {
+[data-theme="light"] {
   --clr-bg: #{$nord06};
   --clr-elevated: #{$nord04};
   --clr-elevated-1: #{$nord01};
@@ -44,10 +31,8 @@
 }
 
 body {
-  font-family: var(--fnt-sans);
   background-color: var(--clr-bg);
   color: var(--clr-txt);
-  min-height: 100vh;
   ::selection {
     background-color: var(--clr-txt);
     color: var(--clr-txt-selection);
@@ -63,42 +48,11 @@ footer {
   background-color: var(--clr-bg);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--fnt-serif), serif;
-}
-
-h1 {
-  font-weight: 800;
-}
-
-h2,
-h3 {
-  font-weight: 600;
-}
-
-h4,
-h5,
-h6 {
-  font-weight: 400;
-}
-
-img {
-  display: block;
-  height: auto;
-  max-width: 100%;
-}
-
 a {
   color: var(--clr-txt);
 
   &:hover {
     color: var(--clr-subtle);
-    font-weight: 700;
   }
 
   &:visited {
@@ -107,12 +61,5 @@ a {
 
   &:active {
     color: var(--clr-subtle);
-    border: 0.125em dashed var(--clr-subtle);
-  }
-}
-
-.social--icons {
-  a {
-    text-decoration: none;
   }
 }

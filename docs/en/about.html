@@ -17,25 +17,16 @@
   <body>
     <header>
       <img class="avatar" src="../resources/images/author.jpeg" alt="" />
-      <div class="toggle-container">
-        <button
-          class="theme-btn dark"
-          onclick="setTheme('dark')"
-          title="Switch to dark mode"
+      <div class="switch">
+        <input class="switch--input" type="checkbox" id="themeSwitch" />
+        <label aria-hidden="true" class="switch--label" for="themeSwitch"
+          >On</label
         >
-          <span class="fas fa-moon fa-lg"></span>
-        </button>
-        <button
-          class="theme-btn light"
-          onclick="setTheme('light')"
-          title="Switch to light mode"
-        >
-          <span class="fas fa-sun fa-lg"></span>
-        </button>
+        <div aria-hidden="true" class="switch--marker"></div>
       </div>
-      <nav> <!--class="text--center"-->
+      <nav class="text--center">
         <ul>
-          <li>About</li>
+          <li class="active">About</li>
           <li>Portfolio</li>
           <li>Contact</li>
         </ul>

@@ -1,7 +1,6 @@
 @use 'abstract' as *;
-@use './general/initials';
+@use 'components' as *;
 @use './mixins/transitions' as *;
-@use './components/buttons' as *;
 @use 'sass:color';
 
 body {
@@ -79,7 +78,7 @@ footer {
 
   a {
     text-decoration: none;
-    text-shadow: 0.125rem 0.125rem 0.25rem $nord01;
+    text-shadow: 0.125rem 0.125rem 0.25rem var(--clr-elevated);
   }
 }
 
