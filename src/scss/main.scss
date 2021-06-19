@@ -1,6 +1,15 @@
 @use 'abstract' as *;
 @use 'components' as *;
-@use 'sass:color';
+// @use 'sass:color';
+
+:root,
+[data-theme="default"] {
+  --bg-img: url("https://picsum.photos/seed/ntinos/2000/1000.webp");
+}
+
+[data-theme="light"] {
+  --bg-img: url("https://picsum.photos/seed/picsum/2000/1000.webp");
+}
 
 body {
   display: grid;
@@ -13,7 +22,7 @@ body {
 
 header {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
-    url("https://picsum.photos/seed/ntinos/2000/1000");
+    var(--bg-img);
   grid-area: top;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -23,48 +32,40 @@ header {
 }
 
 .avatar {
+  @media screen and (max-width: 600px) {
+    grid-column: 1 / 4;
+  }
+
+  @media screen and (min-width: 600.1px) {
+    grid-column: 2 / 3;
+  }
   grid-row: 1 / 2;
-  grid-column: 2 / 3;
   border-radius: 50%;
 }
 
 .switch {
-  grid-row: 1 / 2;
+  grid-row: 2 / 3;
   grid-column: 3 / 4;
-  justify-self: end;
+  justify-self: center;
 }
 
 nav {
   grid-row: 2 / 3;
-  grid-column: 1 / 4;
-  justify-content: center;
-  align-content: center;
-  color: $nord06;
-
-  ul {
-    list-style-type: none;
-    padding-top: 1em;
-    margin: .5em;
+  @media screen and (max-width: 600px) {
+    grid-column: 2 / 3;
   }
-
-  li {
-  display: inline-block;
-  padding: 1em;
-  background-color: $nord03;
-
-  &.active {
-    background-color: var(--clr-tertiary);
-  }
+  @media screen and (min-width: 600.1px) {
+    grid-column: 1 / 4;
   }
 }
 
 main {
   grid-area: mid;
   justify-self: center;
-  width: 80ch;
-  padding: 1em;
+  width: 90vw;
+  max-width: 100ch;
   margin: 1em;
-  box-shadow: .125em .125em .125em 0.125em var(--clr-elevated-1);
+  box-shadow: 0.125em 0.125em 0.125em 0.125em var(--clr-elevated-1);
 }
 
 footer {
@@ -76,3 +77,16 @@ footer {
   border: 0.5em solid var(--clr-primary);
 }
 
+.tab {
+  display: inline-block;
+  margin-top: 0.4em;
+  padding-left: 0.5em;
+  padding-right: 2em;
+  box-shadow: 0.1em 0.1em 0.1em 0.1em var(--clr-elevated-1);
+  width: auto;
+  background-color: var(--clr-tertiary);
+}
+
+p {
+  padding: 1em;
+}

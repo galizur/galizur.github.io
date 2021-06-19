@@ -97,28 +97,26 @@ footer {
 .button-like--index {
   @extend .button-like;
   border-radius: 1.5625em;
-  // background-color: color.scale($nord08, $lightness: -60%);
-  // color: $nord06;
-  background-color: gray;
-  cursor: not-allowed;
+  background-color: color.scale($nord08, $lightness: -60%);
+  color: $nord06;
 
   text-decoration: none;
   font-weight: 600;
   font-size: 1.125rem;
   @include transition-ease-in(0.1s);
 
-  // &:hover {
-  //   background-color: $nord08;
-  //   color: $nord00;
-  //   box-shadow: 0.25rem 0.25rem 0.5rem $nord01;
-  //   text-shadow: 0.125rem 0.125rem 0.25rem $nord01;
-  // }
+  &:hover {
+    background-color: $nord08;
+    color: $nord00;
+    box-shadow: 0.25rem 0.25rem 0.5rem $nord01;
+    text-shadow: 0.125rem 0.125rem 0.25rem $nord01;
+  }
 
-  // &:active {
-  //   @extend :hover;
-  //   box-shadow: 0.25rem 0.25rem 0.5rem $nord01 inset;
-  //   text-shadow: 0.25rem 0.25rem 0.125rem $nord01;
-  // }
+  &:active {
+    @extend :hover;
+    box-shadow: 0.25rem 0.25rem 0.5rem $nord01 inset;
+    text-shadow: 0.25rem 0.25rem 0.125rem $nord01;
+  }
 }
 
 h1 {
@@ -138,8 +136,4 @@ h2 {
   a {
     margin: 1em;
   }
-}
-
-.disabled {
-  cursor: not-allowed;
 }

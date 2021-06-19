@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Personal site of Karolos Triantafyllou" />
+    <meta name="description" content="Πληροφορίες για τον συντάκτη." />
     <meta
       name="keywords"
       content="Portfolio, HTML, CSS, JavaScript, JS, Programming, Coding, C/C++, GameDev, Unreal Engine, UE, Game Engine"
@@ -11,46 +11,93 @@
     <meta name="author" content="Karolos Triantafyllou" />
     <meta name="copyright" content="Karolos Triantafyllou" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Λίγα για εμένα</title>
+    <title>Σχετικά με εμένα</title>
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
-    <head>
-      <div class="toggle-container">
-        <button
-          class="theme-btn dark"
-          onclick="setTheme('dark')"
-          title="Switch to dark mode"
+    <header>
+      <img class="avatar" src="../resources/images/author.jpeg" alt="" />
+      <div class="switch">
+        <input type="checkbox" id="themeSwitch" class="switch--input" />
+        <label
+          aria-hidden="true"
+          class="switch--label"
+          for="themeSwitch"
+          aria-label="Switch themes."
+          >Ανοιχτό</label
         >
-          <span class="fas fa-moon fa-lg"></span>
-        </button>
-        <button
-          class="theme-btn light"
-          onclick="setTheme('light')"
-          title="Switch to light mode"
-        >
-          <span class="fas fa-sun fa-lg"></span>
-        </button>
+        <div aria-hidden="true" class="switch--marker"></div>
       </div>
-      <img src="https://picsum.photos/2000/1000" alt="" />
-      <img src="../resources/images/author.jpeg" alt="" />
-    </head>
-    <main></main>
+      <nav class="nav-main text--center">
+        <ul>
+          <li class="active"><a href="./about.html">Περί εμένα</a></li>
+          <li><a href="#" class="disabled">Δουλειές</a></li>
+          <li><a href="#" class="disabled">Επικοινωνία</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="tab">Σχετικά με εμένα.</h1>
+      <p>
+        Αυτό το κομμάτι θα είναι αφιερωμένο ώστε να με περιγράψει με λίγα λόγια.
+        Για τώρα όμως, λίγο <span lang="zxx">lorem ipsum.</span>
+      </p>
+      <p lang="zxx">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique
+        laudantium tenetur quam aliquid expedita pariatur possimus sint!
+        Pariatur eum molestias ad modi ex totam, facilis aliquam iste. Illo,
+        earum!
+      </p>
+      <p lang="zxx">
+        Delectus necessitatibus nobis distinctio ex eos! Ullam autem quibusdam
+        qui magni incidunt error a ducimus non laboriosam quia, fugit quisquam
+        ab quaerat consequuntur dolor quod! Quam animi porro deserunt? Ab.
+      </p>
+      <p lang="zxx">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita cum
+        consequatur a ipsum sequi ut, eos quas, provident nihil maxime, porro
+        esse doloribus odit mollitia. Illum commodi earum reiciendis itaque!
+      </p>
+      <p lang="zxx">
+        Delectus recusandae harum necessitatibus perferendis dolore excepturi
+        natus nostrum perspiciatis aspernatur. Vero molestiae eius et quas quam!
+        Soluta, iure voluptas sequi autem reprehenderit possimus beatae, qui et
+        tenetur sunt temporibus?
+      </p>
+    </main>
     <footer>
-      <!-- TODO: disable temporarily until a decision has been made -->
-      <!-- <a href="#"><span class="fab fa-facebook-f"></span></a> -->
-      <!-- <a href="#"><span class="fab fa-twitter"></span></a> -->
-      <div class="social--icons">
+      <div class="social--icons text--center">
         <a href="https://github.com/galizur/">
           <span
             class="fab fa-github"
             role="img"
             aria-labelledby="github"
           ></span>
-          <span id="github">Github</span>
+          <span id="github" lang="en">Github</span>
+        </a>
+        <a href="https://twitter.com/galizur_h/">
+          <span
+            class="fab fa-twitter"
+            role="img"
+            aria-labelledby="twitter"
+          ></span>
+          <span id="twitter" lang="en">Twitter</span>
+        </a>
+        <a href="#">
+          <span
+            class="fab fa-instagram"
+            role="img"
+            aria-labelledby="instagram"
+          ></span>
+          <span id="instagram" lang="en">Instagram</span>
         </a>
       </div>
     </footer>
+    <!--! Scripts -->
     <script src="../resources/js/themeSwitch.js"></script>
     <script
       src="https://kit.fontawesome.com/84aca27788.js"
