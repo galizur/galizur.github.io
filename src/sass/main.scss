@@ -1,0 +1,37 @@
+@use 'foundation' as *;
+
+
+
+@media (prefers-color-scheme: dark)
+{
+    :root { background-color: $nord0; color: $nord4;}
+}
+@media (prefers-color-scheme: light)
+{
+    :root { background-color: $nord4; color: $nord0;}
+}
+
+html{
+    font-family: 'Exo 2', sans-serif; 
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Playfair Display', serif;
+    // font-family: 'Vollkorn', serif;
+}
+
+b,strong
+{
+    font-weight: 600;
+}
+
+i,em
+{
+    font-weight: 200;
+}
+
+code,pre
+{
+    font-family: 'Source Code Pro', monospace;
+}
